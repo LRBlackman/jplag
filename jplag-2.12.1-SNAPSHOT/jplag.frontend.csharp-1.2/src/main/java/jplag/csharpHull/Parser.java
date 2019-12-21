@@ -1,4 +1,4 @@
-package jplag.csharp;
+package jplag.csharpHull;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -9,8 +9,8 @@ import java.io.IOException;
 import jplag.StrippedProgram;
 import jplag.Structure;
 import jplag.UnicodeReader;
-import jplag.csharp.grammar.CSharpLexer;
-import jplag.csharp.grammar.CSharpParser;
+import jplag.csharpHull.grammar.CSharpLexer;
+import jplag.csharpHull.grammar.CSharpParser;
 
 public class Parser extends jplag.Parser implements CSharpTokenConstants {
 	private Structure struct;
