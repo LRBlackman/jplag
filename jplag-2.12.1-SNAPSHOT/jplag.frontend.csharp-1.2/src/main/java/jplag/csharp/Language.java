@@ -1,8 +1,8 @@
-package jplag.csharpHull;
-
-import java.io.File;
+package jplag.csharp;
 
 import jplag.ProgramI;
+
+import java.io.File;
 
 public class Language implements jplag.Language {
 	private Parser parser;
@@ -56,10 +56,10 @@ public class Language implements jplag.Language {
 	}
 
 	public int noOfTokens() {
-		return jplag.csharpHull.CSharpToken.numberOfTokens();
+		return CSharpToken.numberOfTokens();
 	}
 
 	public String type2string(int type) {
-		return jplag.csharpHull.CSharpToken.type2string(type);
+		return CSharpToken.type2string(type);
 	}
 }

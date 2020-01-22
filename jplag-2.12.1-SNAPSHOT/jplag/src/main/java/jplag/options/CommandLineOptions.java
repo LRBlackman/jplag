@@ -3,15 +3,15 @@
  */
 package jplag.options;
 
+import jplag.ExitException;
+import jplag.Language;
+import jplag.Program;
+
 import java.io.File;
 import java.lang.reflect.Constructor;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.Vector;
-
-import jplag.ExitException;
-import jplag.Language;
-import jplag.Program;
 
 public class CommandLineOptions extends Options {
     private String[] args;

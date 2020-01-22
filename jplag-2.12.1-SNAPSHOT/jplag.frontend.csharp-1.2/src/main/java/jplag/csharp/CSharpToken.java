@@ -1,4 +1,4 @@
-package jplag.csharpHull;
+package jplag.csharp;
 
 
 public class CSharpToken extends jplag.Token implements CSharpTokenConstants {

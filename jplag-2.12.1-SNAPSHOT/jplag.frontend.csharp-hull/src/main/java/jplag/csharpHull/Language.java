@@ -1,8 +1,8 @@
 package jplag.csharpHull;
 
-import java.io.File;
-
 import jplag.ProgramI;
+
+import java.io.File;
 
 public class Language implements jplag.Language {
 	private Parser parser;
@@ -24,11 +24,11 @@ public class Language implements jplag.Language {
 	}
 
 	public String name() {
-		return "C# 1.2 Parser";
+		return "C# Hull Parser";
 	}
 
 	public String getShortName() {
-		return "c#-1.2";
+		return "c#-hull";
 	}
 
 	public int min_token_match() {

@@ -2,7 +2,7 @@
 
 header 
 {
-package jplag.csharpHull.grammar;
+package jplag.csharp.grammar;
 
 }
 
@@ -20,7 +20,7 @@ options
 	defaultErrorHandler = false;		// don't generate parser error handlers
 	buildAST = false;   
  	exportVocab=CSharp;
-    classHeaderSuffix = "jplag.csharpHull.CSharpTokenConstants";
+    classHeaderSuffix = "jplag.csharp.CSharpTokenConstants";
 }
 
 
@@ -149,7 +149,7 @@ tokens
 	
 // extended consume routine:
 {
-public jplag.csharpHull.Parser parser ;
+public jplag.csharp.Parser parser ;
     private Token lastConsumedToken = null;
     public void consume() {
         try {

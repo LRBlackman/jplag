@@ -1,19 +1,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>csharp-1.2</artifactId>
+	<artifactId>csharp-hull</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<repositories>
-		<repository>
-			<id>ipdNexus</id>
-			<name>IPD-Nexus-Public</name>
-			<url>http://bob.ipd.kit.edu/nexus/repository/maven-public-all/</url>
-		</repository>
-	</repositories>
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>ipdNexus</id>-->
+<!--			<name>IPD-Nexus-Public</name>-->
+<!--			<url>http://bob.ipd.kit.edu/nexus/repository/maven-public-all/</url>-->
+<!--		</repository>-->
+<!--	</repositories>-->
 
 	<build>
 		<plugins>
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-install-plugin</artifactId>-->
+<!--				<version>2.5.2</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>install-external</id>-->
+<!--						<phase>clean</phase>-->
+<!--						<configuration>-->
+<!--							<file>${basedir}/jplag.frontend.csharp-hull\target/csharp-hull-0.0.1-SNAPSHOT.jar</file>-->
+<!--							<repositoryLayout>default</repositoryLayout>-->
+<!--							<groupId>com.csharp-hull</groupId>-->
+<!--							<artifactId>csharp-hull</artifactId>-->
+<!--							<version>0.0.1-SNAPSHOT</version>-->
+<!--							<packaging>jar</packaging>-->
+<!--							<generatePom>true</generatePom>-->
+<!--						</configuration>-->
+<!--						<goals>-->
+<!--							<goal>install-file</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>

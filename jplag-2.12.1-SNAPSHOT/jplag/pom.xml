@@ -141,6 +141,8 @@
                 </dependencies>
             </plugin>
 
+
+
         </plugins>
         <pluginManagement>
             <plugins>
@@ -216,6 +218,10 @@
         <dependency>
             <groupId>edu.kit.ipd.jplag</groupId>
             <artifactId>csharp-1.2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.csharp-hull</groupId>
+            <artifactId>csharp-hull</artifactId>
         </dependency>
         <dependency>
             <groupId>edu.kit.ipd.jplag</groupId>

@@ -58,8 +58,8 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>jplag.csharpHull.Parser</mainClass>
-							<packageName>jplag.csharpHull</packageName>
+							<mainClass>jplag.csharp.Parser</mainClass>
+							<packageName>jplag.csharp</packageName>
 						</manifest>
 					</archive>
 				</configuration>
