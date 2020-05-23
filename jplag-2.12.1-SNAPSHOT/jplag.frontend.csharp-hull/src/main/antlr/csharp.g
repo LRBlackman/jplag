@@ -1010,7 +1010,8 @@ constant_modifiers
 field_declaration
 	:	(attributes)? 
 		field_modifiers 
-		type 
+		type
+		(LTHAN type GTHAN)?
 		variable_declarators
 		SEMI
 	;
@@ -1048,6 +1049,7 @@ method_modifiers
 	;
 return_type
 	:	{LA(2)!=STAR}? VOID
+	|   {LA(2)==LTHAN}? type_name LTHAN return_type (COMMA class_type)* GTHAN
 	|	type
 	;
 member_name
@@ -1066,10 +1068,11 @@ formal_parameter_list
 	;
 method_parameter
 		// fixed_parameter
-	:	((attributes)? (parameter_direction)? type identifier) =>
+	:	((attributes)? (parameter_direction)? type (LTHAN type GTHAN)? identifier) =>
 		 (attributes)? 
 		 (parameter_direction)? 
-		  type 
+		  type
+		  (LTHAN type GTHAN)?
 		  identifier
 		//  parameter_array
 	|	((attributes)? PARAMS array_type identifier) =>
