@@ -270,8 +270,8 @@ unmanaged_type
 	;
 
 class_type
-	:	/*{LA(2)==LTHAN}? type_name LTHAN class_type (COMMA class_type)* GTHAN
-	|	*/type_name
+	:	{LA(2)==LTHAN}? type_name LTHAN class_type (COMMA class_type)* GTHAN
+	|	type_name
 	|	OBJECT
 	|	STRING 
 	;	
