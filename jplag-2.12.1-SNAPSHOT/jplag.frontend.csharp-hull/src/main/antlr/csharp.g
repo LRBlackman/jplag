@@ -336,6 +336,7 @@ primary_start
 	|	checked_expression
 	|	unchecked_expression
 	|	predefined_type_access
+//	|   default_value_expression
 	;
 primary_expression
 	:   primary_start 
@@ -358,6 +359,10 @@ primary_expression
 		|	literal			
 		)*
 	;		
+
+default_value_expression
+    : DEFAULT LPAREN type RPAREN
+    ;
 
 member_access
 	:	DOT identifier 
