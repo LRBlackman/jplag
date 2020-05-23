@@ -352,6 +352,7 @@ public class CommandLineOptions extends Options {
 					// ->public Language(ProgramI prog)
 					Language tmp = (Language) cons.newInstance(ob);
 					this.language = tmp;
+//					this.language = new jplag.csharpHull.Language(program);
 					System.out.println("Language accepted: " + tmp.name() + "\nCommand line: " + this.commandLine);
 					found1 = true;
 				} catch (ClassNotFoundException e) {

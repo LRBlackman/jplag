@@ -1,16 +1,12 @@
 package jplag.csharpHull;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.IOException;
-
 import jplag.StrippedProgram;
 import jplag.Structure;
 import jplag.UnicodeReader;
 import jplag.csharpHull.grammar.CSharpLexer;
 import jplag.csharpHull.grammar.CSharpParser;
+
+import java.io.*;
 
 public class Parser extends jplag.Parser implements CSharpTokenConstants {
 	private Structure struct;
@@ -75,7 +71,6 @@ public class Parser extends jplag.Parser implements CSharpTokenConstants {
 			CSharpLexer lexer = new CSharpLexer(new UnicodeReader(fis, "UTF-8"));
 			lexer.setFilename(file);
 			lexer.setTabSize(1);
-
 			// Create a parser that reads from the scanner
 			CSharpParser parser = new CSharpParser(lexer);
 			parser.setFilename(file);
@@ -86,7 +81,7 @@ public class Parser extends jplag.Parser implements CSharpTokenConstants {
 			// close file
 			fis.close();
 		} catch (Exception e) {
-			getProgram().addError("  Parsing Error in '" + file + "':\n  " + e.toString() + "\n");
+			getProgram().addError("  Parsing Error in hull'" + file + "':\n  " + e.toString() + "\n");
 			return false;
 		}
 		return true;

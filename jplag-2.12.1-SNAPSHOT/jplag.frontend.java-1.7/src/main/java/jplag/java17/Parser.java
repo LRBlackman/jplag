@@ -101,7 +101,7 @@ public class Parser extends jplag.Parser implements JavaTokenConstants {
 			}
 
 		} catch (IOException e) {
-			getProgram().addError("Parsing Error in '" + file + "':\n" + e.getMessage() + "\n");
+			getProgram().addError("Parsing Error in 8'" + file + "':\n" + e.getMessage() + "\n");
 			return false;
 		}
 

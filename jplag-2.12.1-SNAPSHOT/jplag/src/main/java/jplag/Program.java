@@ -1,31 +1,16 @@
 package jplag;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Properties;
-import java.util.TimeZone;
-import java.util.Vector;
-
 import jplag.clustering.Cluster;
 import jplag.clustering.Clusters;
 import jplag.clustering.SimilarityMatrix;
 import jplag.options.Options;
 import jplag.options.util.Messages;
 import jplagUtils.PropertiesLoader;
+
+import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /*
  * This class coordinates the whole program flow.
@@ -913,7 +898,6 @@ public class Program implements ProgramI {
         options.setProgress(0);
         long msec = System.currentTimeMillis();
         Iterator<Submission> iter = submissions.iterator();
-
         if (options.externalSearch)
             makeTempDir();
         int invalid = 0;
@@ -924,8 +908,13 @@ public class Program implements ProgramI {
             print(null, "------ Parsing submission: " + subm.name + "\n");
             currentSubmissionName = subm.name;
             options.setProgress(count * 100 / totalcount);
+            //PARSE ERROR COMING FROM LINE 920-------------------------------------------------------------
             if (!(ok = subm.parse()))
+            {
                 errors++;
+
+            }
+
 
             if (options.exp && options.filter != null)
                 subm.struct = options.filter.filter(subm.struct); // EXPERIMENT
@@ -1130,6 +1119,7 @@ public class Program implements ProgramI {
         if (options.output_file != null) {
             try {
                 writer = new FileWriter(new File(options.output_file));
+
                 writer.write(name_long + "\n");
                 writer.write(dateTimeFormat.format(new Date()) + "\n\n");
             } catch (IOException ex) {
@@ -1139,11 +1129,11 @@ public class Program implements ProgramI {
         } else
             print(null, name_long + "\n\n");
         print(null, "Language: " + options.language.name() + "\n\n");
-        if (options.original_dir == null)
+        if (options.original_dir == null) {
             print(null, "Root-dir: " + options.root_dir + "\n"); // server
-        // this file contains all files names which are excluded
+        }
+            // this file contains all files names which are excluded
         readExclusionFile();
-
         if (options.fileListMode) {
 	        createSubmissionsFileList();
         } else if (options.include_file == null) {
@@ -1151,7 +1141,6 @@ public class Program implements ProgramI {
             System.out.println(submissions.size() + " submissions");
         } else
             createSubmissionsExp();
-
         if (!options.skipParse) {
             try {
                 parseAll();
@@ -1178,7 +1167,6 @@ public class Program implements ProgramI {
             throwNotEnoughSubmissions();
         }
         errorVector = null; // errorVector is not needed anymore
-
         if (options.clustering) {
             clusters = new Clusters(this);
             options.similarity = new SimilarityMatrix(submissions.size());
@@ -1238,7 +1226,6 @@ public class Program implements ProgramI {
 
         str += "/>\n";
         str += "</jplag_infos>";
-
         try {
             FileWriter fw = new FileWriter(new File(this.options.result_dir + File.separator + "result.xml"));
             fw.write(str);

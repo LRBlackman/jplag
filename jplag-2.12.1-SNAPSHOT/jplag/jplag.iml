@@ -26,7 +26,7 @@
     <orderEntry type="module" module-name="java-1.9" />
     <orderEntry type="module" module-name="python-3" />
     <orderEntry type="module" module-name="csharp-1.2" />
-    <orderEntry type="library" name="Maven: com.csharp-hull:csharp-hull:0.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.csharp-hull:csharp-hull:0.0.2-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="cpp" />
     <orderEntry type="module" module-name="scheme" />
     <orderEntry type="module" module-name="chars" />

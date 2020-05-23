@@ -1,8 +1,8 @@
 package jplag.java17;
 
-import java.io.File;
-
 import jplag.ProgramI;
+
+import java.io.File;
 
 public class Language implements jplag.Language {
 	private jplag.java17.Parser parser;
@@ -34,6 +34,7 @@ public class Language implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("Java1.7Flag");
 		return this.parser.parse(dir, files);
 	}
 

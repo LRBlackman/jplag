@@ -1,9 +1,9 @@
 
 package jplag.text;
 
-import java.io.File;
-
 import jplag.ProgramI;
+
+import java.io.File;
 
 /**
  * @Changed by Emeric Kwemou 29.01.2005
@@ -42,6 +42,7 @@ public class Language implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("TextFlag");
 		return this.parser.parse(dir, files);
 	}
 

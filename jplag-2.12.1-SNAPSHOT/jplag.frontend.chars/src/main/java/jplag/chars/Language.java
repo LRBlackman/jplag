@@ -1,8 +1,8 @@
 package jplag.chars;
 
-import java.io.File;
-
 import jplag.ProgramI;
+
+import java.io.File;
 
 /*
  * read in text files as characters
@@ -45,6 +45,7 @@ public class Language implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("CharFlag");
 		return this.parser.parse(dir, files);
 	}
 

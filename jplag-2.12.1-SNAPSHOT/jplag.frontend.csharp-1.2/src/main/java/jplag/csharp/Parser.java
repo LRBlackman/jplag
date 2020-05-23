@@ -82,7 +82,7 @@ public class Parser extends jplag.Parser implements CSharpTokenConstants {
 			// close file
 			fis.close();
 		} catch (Exception e) {
-			getProgram().addError("  Parsing Error in '" + file + "':\n  " + e.toString() + "\n");
+			getProgram().addError("  Parsing Error in 1.2'" + file + "':\n  " + e.toString() + "\n");
 			return false;
 		}
 		return true;

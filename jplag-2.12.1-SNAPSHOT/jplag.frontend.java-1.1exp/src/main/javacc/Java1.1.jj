@@ -48,7 +48,7 @@ public class JavaParser implements JavaTokenConstants {
     try {
       parser.CompilationUnit();
     } catch (ParseException e) {
-      parserX.getProgram().addError("  Parsing Error in '" + fileName + "':\n  "
+      parserX.getProgram().addError("  Parsing Error in 4'" + fileName + "':\n  "
                 + e.getMessage() + "\n");
       return false;
     } catch (TokenMgrError e) {

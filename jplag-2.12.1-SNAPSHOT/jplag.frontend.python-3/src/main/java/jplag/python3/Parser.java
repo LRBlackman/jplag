@@ -105,7 +105,7 @@ public class Parser extends jplag.Parser implements Python3TokenConstants {
             }
 
         } catch (IOException e) {
-            getProgram().addError("Parsing Error in '" + file + "':\n" + e.getMessage() + "\n");
+            getProgram().addError("Parsing Error in 9'" + file + "':\n" + e.getMessage() + "\n");
             return false;
         }
 

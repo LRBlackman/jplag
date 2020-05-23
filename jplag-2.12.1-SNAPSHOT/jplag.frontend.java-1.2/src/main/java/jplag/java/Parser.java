@@ -95,7 +95,7 @@ public class Parser extends jplag.Parser implements JavaTokenConstants {
 			fis.close();
 		} catch (Exception e) {
 			getProgram().addError(
-					"  Parsing Error in '" + file + "':\n" + "  Parse error at line "
+					"  Parsing Error in 6'" + file + "':\n" + "  Parse error at line "
 							+ (inputState != null ? "" + inputState.getLine() : "UNKNOWN") + ", column "
 							+ (inputState != null ? "" + inputState.tokColumn : "UNKNOWN") + ": " + e.getMessage() + "\n");
 			return false;

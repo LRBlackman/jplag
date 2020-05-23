@@ -134,8 +134,13 @@ public class Submission implements Comparable<Submission> {
 				return false;
 			}
 		}
-
-		struct = this.language.parse(dir, files);
+		try {
+			struct = this.language.parse(dir, files);
+		} catch (Exception e){
+			System.out.println(e);
+			throw e;
+		}
+		//struct = this.language.parse(dir, files);
 		if (!language.errors()) {
 			if (struct.size() < 3) {
 				program.print("Submission \"" + name + "\" is too short!\n", null);

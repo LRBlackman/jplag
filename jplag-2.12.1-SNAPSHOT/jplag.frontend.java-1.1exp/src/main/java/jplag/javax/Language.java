@@ -1,9 +1,8 @@
 package jplag.javax;
 
-import java.io.*;
-
 import jplag.ProgramI;
-import jplag.javax.Parser;
+
+import java.io.File;
 
 public class Language implements jplag.Language {
 	private Parser parser;
@@ -48,6 +47,7 @@ public class Language implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("Java1.1Flag");
 		return this.parser.parse(dir, files);
 	}
 

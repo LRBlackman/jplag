@@ -8,7 +8,9 @@ public class Language implements jplag.Language {
 	private Parser parser;
 
 	public Language(ProgramI program) {
+		int a = 2;
 		this.parser = new Parser();
+		System.out.println("create c#-hull parser");
 		this.parser.setProgram(program);
 
 	}

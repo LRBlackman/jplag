@@ -1,8 +1,8 @@
 package jplag.cpp;
 
-import java.io.File;
-
 import jplag.ProgramI;
+
+import java.io.File;
 
 /*
  * Leider werden C/C++ nicht geparst, sondern nur gescannt...
@@ -52,6 +52,7 @@ public class Language implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("CPPFlag");
 		return this.scanner.scan(dir, files);
 	}
 

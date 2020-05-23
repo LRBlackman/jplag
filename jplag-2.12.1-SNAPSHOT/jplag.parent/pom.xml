@@ -241,7 +241,7 @@
 			<dependency>
 				<groupId>com.csharp-hull</groupId>
 				<artifactId>csharp-hull</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>0.0.2-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>edu.kit.ipd.jplag</groupId>

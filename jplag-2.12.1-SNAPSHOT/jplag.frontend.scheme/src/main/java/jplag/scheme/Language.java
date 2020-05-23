@@ -1,8 +1,8 @@
 package jplag.scheme;
 
-import java.io.File;
-
 import jplag.ProgramI;
+
+import java.io.File;
 
 public class Language implements jplag.Language {
 
@@ -50,6 +50,7 @@ public class Language implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("SchemeFlag");
 		return this.parser.parse(dir, files);
 	}
 

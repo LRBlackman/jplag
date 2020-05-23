@@ -39,7 +39,7 @@ public class CPPScanner implements CPPTokenConstants {
         try {
               scanner.scan();
         } catch (ParseException e) {
-              scannerX.getProgram().addError("  Parsing Error in '" + fileName + "':\n  " + e.getMessage() + "\n");
+              scannerX.getProgram().addError("  Parsing Error in 2'" + fileName + "':\n  " + e.getMessage() + "\n");
               return false;
         } catch (TokenMgrError e) {
               scannerX.getProgram().addError("  Scanning Error in '" + fileName + "':\n  " + e.getMessage() + "\n");

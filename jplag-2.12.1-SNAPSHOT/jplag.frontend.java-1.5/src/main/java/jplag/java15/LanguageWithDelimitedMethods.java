@@ -1,8 +1,8 @@
 package jplag.java15;
 
-import java.io.File;
-
 import jplag.ProgramI;
+
+import java.io.File;
 
 /**
  * Java 1.5 parser with method separators; if you know why these separators
@@ -39,6 +39,7 @@ public class LanguageWithDelimitedMethods implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("Java1.5 Parser with delimited methodsFlag");
 		return this.parser.parse(dir, files);
 	}
 

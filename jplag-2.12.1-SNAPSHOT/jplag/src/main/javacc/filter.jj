@@ -93,7 +93,7 @@ public class FilterParser {
     try {
       parser.File();
     } catch (ParseException e) {
-      System.out.println("Parsing Error in '"+
+      System.out.println("Parsing Error in filter'"+
 			 (file==null ? fileName : file.toString())+
 			 "':\n"+e.getMessage());
       return false;

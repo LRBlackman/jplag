@@ -1,9 +1,9 @@
 package jplag.java19;
 
-import java.io.File;
-
 import jplag.ProgramI;
 import jplag.Structure;
+
+import java.io.File;
 
 /**
  * Hello world!
@@ -56,6 +56,7 @@ public class Language implements jplag.Language {
 
 
 	public Structure parse(File dir, String[] files) {
+		System.out.println("Java19Flag");
 		return this.parser.parse(dir, files);
 	}
 

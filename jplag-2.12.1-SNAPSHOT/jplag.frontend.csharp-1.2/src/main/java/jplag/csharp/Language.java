@@ -8,6 +8,7 @@ public class Language implements jplag.Language {
 	private Parser parser;
 
 	public Language(ProgramI program) {
+		System.out.println("Wrong thinggggggggggggggggggggggggggg");
 		this.parser = new Parser();
 		this.parser.setProgram(program);
 
@@ -36,6 +37,7 @@ public class Language implements jplag.Language {
 	}
 
 	public jplag.Structure parse(File dir, String[] files) {
+		System.out.println("please dont print this");
 		return this.parser.parse(dir, files);
 	}
 
