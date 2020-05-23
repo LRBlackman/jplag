@@ -257,7 +257,7 @@ floating_point_type
 reference_type
 	:	(class_type)=>class_type
 	|	(array_type)=>array_type
-//	|	interface_type	// interface_type can only be a type_name
+	|	interface_type	// interface_type can only be a type_name
 //	|	delegate_type	// delegate_type  can only be a type_name
 	;
 
